@@ -37,6 +37,7 @@ The following files are available for the train and test data. Their description
 
 ##Transformation Requirements for the Project
 One R script called `run_analysis.R` should be created that does the following:
+
 1. Merges the training and the test sets to create one data set.
 2. Extracts only the measurements on the mean and standard deviation for each measurement.
 3. Uses descriptive activity names to name the activities in the data set.
@@ -46,6 +47,7 @@ One R script called `run_analysis.R` should be created that does the following:
 ##About the Transformations in `run_analysis.R'
 ###Brief Outline
 The script inmplemented in `run_analysis.R' has the following outline:
+
 1. Check for the required libraries, and install the packages as necessary. Load the libraries required.
 2. Check if the compressed zip dataset is available in the working folder. If not, the script will download and unzip it.
 3. Load the required data into the environment.
