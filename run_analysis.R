@@ -40,6 +40,8 @@ trsubject <- read.table("UCI HAR Dataset/train/subject_train.txt")
 dataset.lab <- rbind(testset.lab,trset.lab)
 dataset.lab[,2] = activity.lab[dataset.lab[,1],2]
 
+
+
 #4. Extracting the std and mean measurements
 extract_list <- grep('std|mean',features.name)
 
