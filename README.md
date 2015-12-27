@@ -25,4 +25,4 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
 
 
 ###Dependencies
-The R script requires plyr to run. `run_analysis.R` will help to install the dependencies if needed.
+The R script requires plyr to run. `run_analysis.R` will help to install the library and dependencies if needed.
