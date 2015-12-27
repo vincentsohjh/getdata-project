@@ -48,17 +48,33 @@ One R script called `run_analysis.R` should be created that does the following:
 ###Brief Outline
 The script inmplemented in `run_analysis.R' has the following outline:
 
-1. Check for the required libraries, and install the packages as necessary. Load the libraries required.
+1. Check for the required libraries (`plyr`), and install the packages as necessary. Load the libraries required.
 2. Check if the compressed zip dataset is available in the working folder. If not, the script will download and unzip it.
 3. Load the required data into the environment.
 4. Extract the mean and standard deviation from the data.
 5. Merge the required data into the complete data set with the mean and standard deviation data.
 6. Process the data to create a second independent tidy data set.
 
-###
+###1. Check for Libraries
+The script will first check is the required libraries, in this case `plyr`, are available. It will install the package if it is missing, and will load it thereafter.
 
+###2. Check for the Dataset
+If the dataset is not available, it will download the dataset and unzip it automatically. The `download.file` function is used, and the `method` is defined by the default. The use of `curl` method is not appropriate and will not run on windows 8.1 .
 
+###3. Load the dataset in the environment
+All the required dataset is loaded into the environment. Each set of data is created with the testing set placed first before the training set (e.g. for the labels, acticity, etc).
 
+###4. Extract the mean and standard deviation from the Dataset
+As you may notice, there is a total of 561 variables in the dataset. Similarly, the features loaded has 561 feature labels, which is used for the selection of the mean and standard deviation values.
 
+The extract list is first created, and then used subsequently to extract the values from the dataset.
+
+As the extracted feature names are not well defined with lots of brackets in the name, it is further cleaned up using `sub` before using it as the column names for the dataset.
+
+###5. Merge the required data into the complete data set
+The final dataset created has only the mean and standard deviation values, with the `Subject`, `Activity.ID`, `Activity.Type`.
+
+###6. Creating a Second Dataset
+Based on the requirements, a second dataset is created, which gives the mean for each variable per activity type per subject. The dataset is then save to `tidy_data_sgs.txt`.
 
 
