@@ -19,7 +19,7 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
 1. Fork this repository. You can also clone it or download it to your local drive.
 2. Navigate to the folder in which this repository exists.
 3. Set this folder as the working directory using setwd() in R.
-4. Download the dataset into this folder and unzip to this folder. You should have a folder called `UCI HAR Datase`.
+4. Download the dataset into this folder and unzip to this folder. You should have a folder called `UCI HAR Datase`. You can also let the script do the downloading for you.
 5. Run the `run_analysis.R` using the source() command.
 6. A `tidy_data_sgs.txt` file will be generated in this folder.
 
